@@ -13,26 +13,33 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
+import About from "./component/About";
 
 export default function App() {
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState(0);
 
-  const images = ["/sny.jpeg", "/sny2.jpeg", "/sny3.jpeg", "/sny4.jpeg", "/sny5.jpeg", "/sny6.jpeg"];
+  const images = [
+    "/sny.jpeg",
+    "/sny2.jpeg",
+    "/sny3.jpeg",
+    "/sny4.jpeg",
+    "/sny6.jpeg",
+  ];
   const socialLinks = [
-  {
-    icon: Instagram,
-    link: "https://www.instagram.com/raisane11",
-  },
-  {
-    icon: Linkedin,
-    link: "https://www.linkedin.com/in/sunny-rai-6a5aa8337",
-  },
-  {
-    icon: Twitter,
-    link: "https://x.com/machinery_1",
-  },
-];
+    {
+      icon: Instagram,
+      link: "https://www.instagram.com/raisane11",
+    },
+    {
+      icon: Linkedin,
+      link: "https://www.linkedin.com/in/sunny-rai-6a5aa8337",
+    },
+    {
+      icon: Twitter,
+      link: "https://x.com/machinery_1",
+    },
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -87,37 +94,37 @@ export default function App() {
         )}
       </nav>
 
-{/* Floating Social Icons – Desktop */}
-<div className="hidden md:flex fixed left-8 top-1/2 -translate-y-1/2 flex-col gap-6 z-40">
-  {socialLinks.map((item, i) => (
-    <a
-      key={i}
-      href={item.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group w-12 h-12 flex items-center justify-center rounded-full
+      {/* Floating Social Icons – Desktop */}
+      <div className="hidden md:flex fixed left-8 top-1/2 -translate-y-1/2 flex-col gap-6 z-40">
+        {socialLinks.map((item, i) => (
+          <a
+            key={i}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group w-12 h-12 flex items-center justify-center rounded-full
                  border border-blue-500/40 text-blue-500 backdrop-blur
                  hover:bg-blue-500 hover:text-black hover:scale-110 transition"
-    >
-      <item.icon size={20} />
-    </a>
-  ))}
-</div>
+          >
+            <item.icon size={20} />
+          </a>
+        ))}
+      </div>
 
-{/* Floating Social Dock – Mobile */}
-<div className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 flex gap-8 px-8 py-4 rounded-full bg-black/70 backdrop-blur-xl border border-gray-800 z-40">
-  {socialLinks.map((item, i) => (
-    <a
-      key={i}
-      href={item.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="p-2 active:scale-90 transition"
-    >
-      <item.icon className="text-blue-500 w-6 h-6" />
-    </a>
-  ))}
-</div>
+      {/* Floating Social Dock – Mobile */}
+      <div className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 flex gap-8 px-8 py-4 rounded-full bg-black/70 backdrop-blur-xl border border-gray-800 z-40">
+        {socialLinks.map((item, i) => (
+          <a
+            key={i}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 active:scale-90 transition"
+          >
+            <item.icon className="text-blue-500 w-6 h-6" />
+          </a>
+        ))}
+      </div>
 
       {/* Home */}
       <section
@@ -207,15 +214,7 @@ export default function App() {
       </section>
 
       {/* About */}
-      <section id="about" className="px-6 py-24 bg-gray-900">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-6 text-blue-500">About Me</h2>
-          <p className="text-gray-300">
-            Strategy, discipline, leadership — learned through cricket and
-            sharpened through management studies.
-          </p>
-        </div>
-      </section>
+      <About />
 
       {/* Contact */}
       <section id="contact" className="px-6 py-24">
