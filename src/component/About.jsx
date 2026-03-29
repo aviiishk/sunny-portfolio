@@ -181,7 +181,7 @@ export default function About() {
               <CountUpStat label="Innings" value={136} Icon={Activity} />
               <CountUpStat label="Runs" value={5024} Icon={TrendingUp} />
               <CountUpStat label="Highest Score" value={201} Icon={Star} />
-              <CountUpStat label="Batting Avg" value={4.66} Icon={Target} />
+              <CountUpStat label="Batting Avg" value={44.6} Icon={Target} />
               <CountUpStat label="Wickets" value={203} Icon={Shield} />
             </motion.div>
 
