@@ -5,9 +5,6 @@ import {
   Instagram,
   Linkedin,
   Twitter,
-  Phone,
-  MapPin,
-  Globe,
   GraduationCap,
   Trophy,
   ChevronLeft,
@@ -205,6 +202,7 @@ export default function App() {
               <span className="flex items-center gap-3 px-5 py-3 rounded-xl bg-white/5 border border-gray-700">
                 <GraduationCap className="text-blue-500" /> Management
               </span>
+
               <span className="flex items-center gap-3 px-5 py-3 rounded-xl bg-white/5 border border-gray-700">
                 <Trophy className="text-blue-500" /> Cricketer
               </span>
@@ -216,23 +214,7 @@ export default function App() {
       {/* About */}
       <About />
 
-      {/* Contact */}
-      <section id="contact" className="px-6 py-24">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-8 text-blue-500">Contact</h2>
-          <div className="space-y-4 text-gray-300">
-            <p className="flex gap-3">
-              <Globe /> itsunnyy.in
-            </p>
-            <p className="flex gap-3">
-              <Phone /> 9707298014
-            </p>
-            <p className="flex gap-3">
-              <MapPin /> Assam, India
-            </p>
-          </div>
-        </div>
-      </section>
+
 
       <footer className="text-center py-6 text-gray-500 border-t border-gray-800">
         © {new Date().getFullYear()} itsunnyy.in
